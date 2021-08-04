@@ -1,0 +1,40 @@
+{
+	"name": "code-miner",
+	"displayName": "code_miner",
+	"description": "a gamification plugin for coding",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.57.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "code-miner.start",
+				"title": "Start to dig"
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.57.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.2.2",
+		"@types/node": "14.x",
+		"eslint": "^7.27.0",
+		"glob": "^7.1.7",
+		"mocha": "^8.4.0",
+		"typescript": "^4.3.2",
+		"vscode-test": "^1.5.2"
+	}
+}
